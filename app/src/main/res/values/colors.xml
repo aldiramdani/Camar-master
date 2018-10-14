@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#feac3b</color>
+    <color name="colorPrimaryDark">#feac3b</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="navTextColor">#2d2d2d</color>
+    <color name="headTextColor">#2d2d2d</color>
+    <color name="magnitude1">#4A7BA7</color>
+    <color name="magnitude2">#04B4B3</color>
+    <color name="magnitude3">#10CAC9</color>
+    <color name="magnitude4">#F5A623</color>
+    <color name="magnitude5">#FEAC3B </color>
+    <color name="magnitude6">#FEAC3B </color>
+    <color name="magnitude7">#F12525 </color>
+    <color name="magnitude8">#F12525 </color>
+    <color name="magnitude9">#F12525 </color>
+    <color name="magnitude10plus">#C03823</color>
+    <color name="location_background">#e0f7eb</color>
+</resources>

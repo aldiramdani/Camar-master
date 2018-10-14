@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Camar</string>
+    <string name="infoGempaText">Info Gempa</string>
+    <string name="infoGempaTextTerkini">Gempa Terkini</string>
+    <string name="cepatTanggap">Cepat Tanggap</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_gempa">Gempa</string>
+    <string name="nav_cepatTanggap">Cepat Tanggap</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

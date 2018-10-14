@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailGempaActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Gempa Terkini"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_lama_gempa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/txt_timeDialog"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="06-Agt-18
+22:17:19WIB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:src="@mipmap/ic_time"
+        app:layout_constraintEnd_toStartOf="@+id/txt_timeDialog"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/mapView2"
+        android:layout_width="384dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="11dp"
+        tools:context=".DetailGempaActivity"
+        app:layout_constraintBottom_toTopOf="@+id/barrier4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier3" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_location"
+        app:layout_constraintEnd_toStartOf="@+id/txt_locationDialog"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier4" />
+
+    <TextView
+        android:id="@+id/txt_locationDialog"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:text="Pusat Gempa Berada di darat 16km Tenggara bengkulu utara"
+        app:layout_constraintBottom_toTopOf="@+id/barrier7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/barrier4" />
+
+    <ImageView
+        android:id="@+id/img_indicator_gempa"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="32dp"
+        android:src="@mipmap/ic_sr_ijolumut"
+        app:layout_constraintEnd_toStartOf="@+id/txt_magnitudeDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrier7" />
+
+    <TextView
+        android:id="@+id/txt_magnitudeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
+        android:layout_marginTop="17dp"
+        android:text="4.5"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/img_indicator_gempa"
+        app:layout_constraintTop_toBottomOf="@+id/txt_locationDialog" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:text="Magnitudo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/img_indicator_gempa" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="53dp"
+        android:src="@mipmap/ic_depth"
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/barrier7" />
+
+    <TextView
+        android:id="@+id/txt_kedalamanDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:text="7.6"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/barrier7" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:text="Kedalaman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/txt_kedalamanDetail" />
+
+    <ImageView
+        android:id="@+id/img_indicatorTsunamiDialog"
+        android:layout_width="40dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="4dp"
+        android:src="@mipmap/ic_tsunami_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/txt_indicatorTsunamiDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Tidak Berpotensi Tsunami"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/img_indicatorTsunamiDialog"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Informasi Gempa"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_indicatorTsunamiDialog" />
+
+    <TextView
+        android:id="@+id/txt_informasiGempa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textView2,txt_lama_gempa,txt_timeDialog,imageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="mapView2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="textView15,txt_magnitudeDetail,imageView6,img_indicator_gempa,textView17,txt_kedalamanDetail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

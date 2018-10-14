@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@mipmap/ic_home"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/ic_gempa"
+        android:icon="@mipmap/ic_sr"
+        android:title="@string/nav_gempa" />
+    <item
+        android:id="@+id/ic_cepattgp"
+        android:icon="@mipmap/ic_cepattgp"
+        android:title="@string/nav_cepatTanggap" />
+</menu>

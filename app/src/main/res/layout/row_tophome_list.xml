@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:padding="8dp"
+    android:id="@+id/parentTopHome"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity">
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/txt_timeHome"
+                android:src="@mipmap/ic_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#2d2d2d"
+                android:id="@+id/txt_timeHome"
+                android:layout_alignParentRight="true"
+                tools:text="06-Agt-18 2:17:19 WIB"
+                android:textSize="13sp"
+                android:layout_width="80dp"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
+                    android:text="Gempa Terkini"
+                    android:textColor="#2d2d2d"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/rubik" />
+
+                <!--<TextView-->
+                <!--android:textSize="11sp"-->
+                <!--tools:text="36 menit yang lalu"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <LinearLayout
+                    android:weightSum="4"
+                    android:layout_marginTop="33dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_indicator_gempaHome"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/ic_sr"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txt_magnitudoHome"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="26sp"
+                            android:textColor="#2d2d2d"
+                            tools:text="4.6"
+                            android:layout_marginRight="20dp"
+                            />
+                        <TextView
+                            android:textColor="#2d2d2d"
+                            android:textSize="10sp"
+                            android:text="Magnitudo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_depthHome"
+                        android:layout_weight="1"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/ic_depth"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txt_kedalamanHome"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="26sp"
+                            android:textColor="#2d2d2d"
+                            tools:text="7.6"
+                            />
+                            <TextView
+                                android:text="KM"
+                                android:textSize="12sp"
+                                android:textColor="#2d2d2d"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <TextView
+                            android:textColor="#2d2d2d"
+                            android:textSize="10sp"
+                            android:text="Kedalaman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_indicatorTsunamiHome"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/ic_tsunami_green"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:id="@+id/txt_indicatorTsunamiHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_indicatorTsunamiHome"
+                        android:text="Tidak Berpotensi Tsunami"
+                        android:textColor="#2d2d2d"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="@null"
+                    android:layout_marginRight="@null"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/location_background"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+
+                        android:src="@mipmap/ic_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txt_keteranganGempaHome"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#2d2d2d"
+                        android:layout_marginRight="15dp"
+                        tools:text="Pusat gempa berada di darat 16km Tenggara Bengkulu Utara"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
