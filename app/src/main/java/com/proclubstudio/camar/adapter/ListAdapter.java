@@ -3,6 +3,7 @@ package com.proclubstudio.camar.adapter;
 import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -14,12 +15,17 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.proclubstudio.camar.DetailGempaActivity;
 import com.proclubstudio.camar.R;
 import com.proclubstudio.camar.model.JSON;
 
+import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
 {
@@ -46,17 +52,22 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(ListAdapter.ViewHolder holder, int position) {
-
-        formattedMagnitude = formatMagnitude(Data.get(position).getMag());
-        formattedDepth = formatDepth(Data.get(position).getDepth());
+    public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int position) {
+        //init
         indicatorTsunami = (Data.get(position).getTsunami());
         if (indicatorTsunami == 0){
             statusTsunami = "Tidak Berpotensi Tsunami";
         }else{
             statusTsunami = "Berpotensi Tsunami";
         }
-        holder.txt_keteranganGempaList.setText(Data.get(position).getPlace());
+        formattedMagnitude = formatMagnitude(Data.get(position).getMag());
+        formattedDepth = formatDepth(Data.get(position).getDepth());
+        final String formattedTime = formatTime(Data.get(position).getTime());
+        final String Longtitude = (Data.get(position).getLocation().getCoordinates().get(0).toString());
+        final String Latitude = (Data.get(position).getLocation().getCoordinates().get(1).toString());
+        final String keterangan_gempa = (Data.get(position).getPlace());
+
+        holder.txt_keteranganGempaList.setText(keterangan_gempa);
         holder.txt_indicatorTsunamiList.setText(statusTsunami);
 //        holder.txt_timeList.setText(Data.get(position).getTime());
         holder.txt_kedalamanGempaList.setText(formattedDepth+"KM");
@@ -71,6 +82,21 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(mContext, DetailGempaActivity.class);
+                indicatorTsunami = (Data.get(position).getTsunami());
+                if (indicatorTsunami == 0){
+                    statusTsunami = "Tidak Berpotensi Tsunami";
+                }else{
+                    statusTsunami = "Berpotensi Tsunami";
+                }
+                intent.putExtra("txt_magnitude",formatMagnitude(Data.get(position).getMag()));
+                intent.putExtra("txt_time",formatTime(Data.get(position).getTime()));
+                intent.putExtra("txt_kedalaman",formatDepth(Data.get(position).getDepth()));
+                intent.putExtra("txt_keterangan",(Data.get(position).getPlace()));
+                intent.putExtra("txt_longtitude",(Data.get(position).getLocation().getCoordinates().get(0).toString()));
+                intent.putExtra("txt_latitude",(Data.get(position).getLocation().getCoordinates().get(1).toString()));
+                intent.putExtra("statusTsunami",statusTsunami);
+                mContext.startActivity(intent);
             }
         });
     }
@@ -139,6 +165,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
         DecimalFormat depthFromat = new DecimalFormat("0.0");
         return depthFromat.format(depth);
     }
-
-
+    private String formatTime(long time){
+        Calendar cal = Calendar.getInstance(Locale.ENGLISH);
+        cal.setTimeInMillis(time);
+        String date = android.text.format.DateFormat.format("dd-MM-yyyy hh:mm:ss aa", cal).toString();
+        return date;
+    }
 }

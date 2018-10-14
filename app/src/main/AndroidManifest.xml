@@ -35,7 +35,9 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDSOG6tTlnAIPDluKcjDOlcEpbqmSo2wSM" />
 
-        <activity android:name=".DetailGempaActivity" />
+        <activity android:name=".DetailGempaActivity"
+            android:parentActivityName=".MainActivity"
+            />
     </application>
 
 </manifest>

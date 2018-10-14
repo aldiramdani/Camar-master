@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Fragment[] fragments = { new HomeFragment(), new ListGempaFragment()};
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
                         loadFragment(fragments[1]);
                         break;
                     case R.id.ic_cepattgp:
+                        Toast toast = Toast.makeText(getApplicationContext(),"Coming Soon",Toast.LENGTH_SHORT);
+                        toast.show();
                         break;
                 }
 

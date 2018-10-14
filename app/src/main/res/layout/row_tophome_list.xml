@@ -71,7 +71,7 @@
                         android:id="@+id/img_indicator_gempaHome"
                         android:layout_weight="1"
                         android:layout_marginRight="20dp"
-                        android:src="@mipmap/ic_sr"
+                        android:src="@mipmap/ic_sr_ijolumut"
                         android:layout_width="54dp"
                         android:layout_height="54dp" />
                     <LinearLayout
@@ -120,15 +120,7 @@
                             android:textSize="26sp"
                             android:textColor="#2d2d2d"
                             tools:text="7.6"
-                            />
-                            <TextView
-                                android:text="KM"
-                                android:textSize="12sp"
-                                android:textColor="#2d2d2d"
-                                android:layout_marginBottom="5dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-                        </LinearLayout>
+                            /></LinearLayout>
                         <TextView
                             android:textColor="#2d2d2d"
                             android:textSize="10sp"

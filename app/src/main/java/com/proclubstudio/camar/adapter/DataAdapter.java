@@ -62,7 +62,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         //setdata
         holder.txt_timeHome.setText(formattedTime);
         holder.txt_magnitudoHome.setText(formattedMagnitude);
-        holder.txt_kedalamanHome.setText(formattedDepth);
+        holder.txt_kedalamanHome.setText(formattedDepth +" KM" +
+                "");
         holder.txt_keteranganGempaHome.setText(keterangan_gempa);
         holder.txt_indicatorTsunamiHome.setText(statusTsunami);
 

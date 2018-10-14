@@ -1,5 +1,6 @@
 package com.proclubstudio.camar;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,6 +48,8 @@ public class DetailGempaActivity extends AppCompatActivity implements OnMapReady
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_gempa);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Detail Gempa");
 
         getIncomingIntent();
         //Map
@@ -69,7 +72,7 @@ public class DetailGempaActivity extends AppCompatActivity implements OnMapReady
         lokasiGempa.setText("Gempa Berada Di "+txt_keterangan);
         txt_waktuGempa.setText(txt_time);
         txt_magnitudoGempa.setText(txt_magnitude);
-        txt_kedalamanGempa.setText(txt_kedalaman);
+        txt_kedalamanGempa.setText(txt_kedalaman +" KM");
         txt_indicatorTsunami.setText(statusTsunami);
         txt_informasiGempa.setText("Lokasi Gempa Berada di "+txt_keterangan +
                 " Berada Pada "+txt_longtitude +" LS , "+txt_latitude+" BT");
@@ -97,6 +100,7 @@ public class DetailGempaActivity extends AppCompatActivity implements OnMapReady
 
         LatLng test = new LatLng(lat,lot);
         mMap.addMarker(new MarkerOptions().position(test).title("Gempa Berada Di Titik Ini"));
+        mMap.setMinZoomPreference(5);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(test));
     }
 }
